@@ -1,0 +1,97 @@
+﻿@page
+@model PrivacyModel
+@{
+    <title>@ViewData["Title"] - MIQUELINGENIERIA</title>
+}
+
+<style>
+    html, body {
+        margin: 0;
+        padding: 0;
+        height: 100%;
+        font-family: Arial, sans-serif;
+        background: url('https://img2.wallspic.com/attachments/crops/6/5/9/9/29956/29956-en_blanco_y_negro-negro-monocromo-simetria-estructura-3840x2160.jpg') no-repeat center center fixed;
+        background-size: cover;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .form-container {
+        background-color: rgba(40, 40, 40, 0.85); /* gris oscuro con transparencia */
+        padding: 30px;
+        border-radius: 10px;
+        width: 400px;
+        color: white;
+        box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+    }
+
+        .form-container h2 {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        .form-container label {
+            display: block;
+            margin-top: 15px;
+            font-weight: bold;
+        }
+
+        .form-container input {
+            width: 100%;
+            padding: 8px;
+            margin-top: 5px;
+            border: none;
+            border-radius: 5px;
+        }
+
+        .form-container button {
+            margin-top: 20px;
+            width: 100%;
+            padding: 10px;
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+            .form-container button:hover {
+                background-color: #45a049;
+            }
+</style>
+<div class="form-container">
+    <h2>Regístrate con nosotros:</h2>
+
+    @if (!string.IsNullOrEmpty(Model.Mensaje))
+    {
+        <p style="color: yellow; font-weight: bold; text-align: center;">@Model.Mensaje</p>
+    }
+    <form method="post">
+    </form>
+</div>
+<div class="form-container">
+    <h2>Regístrate con nosotros:</h2>
+
+    <form method="post">
+        <label for="nombre">Nombres</label>
+        <input type="text" name="nombre" placeholder="Ingresa tu nombre" required />
+
+        <label for="apellido">Apellidos</label>
+        <input type="text" name="apellido" placeholder="Ingresa tus apellidos" required />
+
+        <label for="correo">Correo</label>
+        <input type="email" name="correo" placeholder="Ingresa tu correo" required />
+
+        <label for="telefono">Teléfono</label>
+        <input type="number" name="telefono" placeholder="Ingresa tu número telefónico" required />
+
+        <label for="direccion">Dirección</label>
+        <input type="text" name="direccion" placeholder="Ingresa tu dirección" />
+
+        <label for="fecha_nacimiento">Fecha de nacimiento</label>
+        <input type="date" name="fecha_registro" required />
+
+        <button type="submit">Siguiente</button>
+    </form>
+</div>
