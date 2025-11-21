@@ -1,10 +1,35 @@
 ﻿@page
 @model IndexModel
 @{
-    ViewData["Title"] = "Home page";
+    ViewData["Title"] = "Inicio - MIQUELINGENIERIA";
 }
 
-<div class="text-center">
-    <h1 class="display-4">Welcome</h1>
-    <p>Learn about <a href="https://learn.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
+<!-- Hero principal -->
+<div class="jumbotron text-center bg-light p-5 rounded shadow">
+    <h1 class="display-4 text-primary">Bienvenido a MIQUELINGENIERIA</h1>
+    <p class="lead">Innovación y tecnología al servicio de tus proyectos</p>
+    <hr class="my-4">
+    <p>Haz clic en el botón para registrar un nuevo usuario en nuestro sistema.</p>
+    <a asp-page="/Registro" class="btn btn-success btn-lg shadow">Ir al Registro</a>
+</div>
+
+<!-- Sección de información -->
+<div class="container mt-5">
+    <div class="row text-center">
+        <div class="col-md-4">
+            <i class="bi bi-gear-fill text-primary" style="font-size:3rem;"></i>
+            <h3 class="mt-3">Ingeniería</h3>
+            <p>Soluciones técnicas adaptadas a tus necesidades.</p>
+        </div>
+        <div class="col-md-4">
+            <i class="bi bi-lightbulb-fill text-warning" style="font-size:3rem;"></i>
+            <h3 class="mt-3">Innovación</h3>
+            <p>Ideas frescas para impulsar tu negocio.</p>
+        </div>
+        <div class="col-md-4">
+            <i class="bi bi-people-fill text-success" style="font-size:3rem;"></i>
+            <h3 class="mt-3">Equipo</h3>
+            <p>Profesionales comprometidos con la excelencia.</p>
+        </div>
+    </div>
 </div>
