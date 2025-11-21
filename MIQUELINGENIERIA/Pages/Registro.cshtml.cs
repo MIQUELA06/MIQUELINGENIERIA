@@ -20,8 +20,8 @@ namespace MIQUELINGENIERIA.Pages
             {
                 conn.Open();
                 string query = @"INSERT INTO usuarios 
-                    (Nombres, Apellidos, FechaNacimiento, Correo, Telefono, Direccion) 
-                    VALUES (@Nombres, @Apellidos, @FechaNacimiento, @Correo, @Telefono, @Direccion)";
+                    (Nombres, Apellidos, FechaNacimiento, Correo, Telefono, Direccion, Sexo) 
+                    VALUES (@Nombres, @Apellidos, @FechaNacimiento, @Correo, @Telefono, @Direccion, @Sexo)";
 
                 using (var cmd = new MySqlCommand(query, conn))
                 {
@@ -31,7 +31,7 @@ namespace MIQUELINGENIERIA.Pages
                     cmd.Parameters.AddWithValue("@Correo", Usuario.Correo);
                     cmd.Parameters.AddWithValue("@Telefono", Usuario.Telefono);
                     cmd.Parameters.AddWithValue("@Direccion", Usuario.Direccion);
-
+                    cmd.Parameters.AddWithValue("@Sexo", Usuario.Sexo);
                     cmd.ExecuteNonQuery();
                 }
             }

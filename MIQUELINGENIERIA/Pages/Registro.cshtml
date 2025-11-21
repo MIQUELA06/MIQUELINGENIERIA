@@ -50,6 +50,17 @@
                 <span asp-validation-for="Usuario.Direccion" class="text-danger"></span>
             </div>
 
+            <div class="form-group mb-3">
+                <label>Sexo</label>
+                <select asp-for="Usuario.Sexo" class="form-control">
+                    <option value="">Seleccione...</option>
+                    <option value="Masculino">Masculino</option>
+                    <option value="Femenino">Femenino</option>
+                    <option value="Otro">Otro</option>
+                </select>
+                <span asp-validation-for="Usuario.Sexo" class="text-danger"></span>
+            </div>
+
             <div class="text-center">
                 <button type="submit" class="btn btn-success btn-lg shadow">Registrar</button>
             </div>

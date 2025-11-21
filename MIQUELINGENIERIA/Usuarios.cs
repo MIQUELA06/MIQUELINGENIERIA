@@ -22,5 +22,9 @@ namespace MIQUELINGENIERIA.Models
 
         [Required, StringLength(200)]
         public string Direccion { get; set; }
+
+        [Required, StringLength(10)]
+        public string Sexo { get; set; }
+
     }
 }
